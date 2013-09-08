@@ -25,7 +25,7 @@ form = """
 def write_form(input=''): # string substitution
 	return form.format(**{'input':escape_html(input)})
 
-def encrypt(s):pi
+def encrypt(s):
 	chars=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
 		   'p','q','r','s','t','u','v','w','x','y','z']
 	output = ''
