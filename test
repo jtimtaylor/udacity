@@ -1,0 +1,25 @@
+import datetime
+import sqlite3
+
+def create_db():
+    con = sqlite3.connect('blogs.db')
+    cur = con.cursor()
+    try:
+        cur.execute("CREATE TABLE blogs (id INTEGER PRIMARY KEY, title TEXT, entry TEXT, created TEXT)")
+        print('Database created.')
+    except:
+        print('Database exists.')
+    con.close()
+
+def add_entry(title,content):
+    now = datetime.datetime.now() # Get current datetime
+    con = sqlite3.connect('blogs.db') # connect to database
+    cur = con.cursor()
+    cur = con.cursor() #set cursor
+    cur.execute("INSERT INTO blogs (title,entry,created) values (?,?,?)", (title,content,now))
+    print('Database entry added.')
+    con.commit()
+    con.close()
+
+create_db()
+add_entry("Test","Entry_Test")

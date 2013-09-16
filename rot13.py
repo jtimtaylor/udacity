@@ -13,7 +13,7 @@ form = """
     <h2>Enter some text to ROT13:</h2>
     <form method="post">
 	<br>
-	<textarea name="text" 
+	<textarea name="text"
 		      style="height: 100px; width: 400px;">{input}</textarea>
 	<br>
 	<input type="submit">
@@ -48,7 +48,7 @@ def rot():
 @route('/rot13', method="POST")
 def rot():
 	user_text = request.POST.get("text")
-	
+
 	rotted = encrypt(user_text)
 
 	return write_form(rotted)
