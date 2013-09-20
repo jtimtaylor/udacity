@@ -11,7 +11,7 @@
     Tim's Blog!
   </a>
   <div>
-    <a href="/newpost">New post</a>
+    <a href="/blog/newpost">New post</a>
 
   <div class="login-area">
       <a class="login-link" href="/blog/login">login</a>
